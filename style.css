@@ -1,0 +1,70 @@
+body {
+  background-color: ivory;
+}
+.artbox {
+    display: inline-flex;
+    flex: auto;
+    flex-flow: row wrap;
+    font-size: 0;
+    margin: 30px;
+    margin-top: 15px;
+    padding: 35px;
+    background-image: url("https://s-media-cache-ak0.pinimg.com/736x/b6/07/95/b60795007716db1797bf6245dda97361.jpg");
+}
+.square {
+  font-size: 0;
+  display: inline-flex;
+  height: 20px;
+  width: 20px;
+  border: .5px solid black;
+  background-color: white;
+}
+.palette{
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content:center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+@keyframes flipOut {
+  from {transform: rotateY(200deg); transform-origin: 45%;}
+  to {transform: rotateY(-180deg);}
+}
+.paletteColor{
+  border: 1px solid black;
+  margin-right: 5px;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  animation-name: flipOut;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+}
+@keyframes flipIn {
+    from {transform: rotateY(0deg); transform-origin: 45%;}
+    to {transform: rotateY(200deg);}
+}
+.paletteColor:hover{
+    transform: rotateY(210deg);
+    animation-name: flipIn;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+}
+.currentColor{
+  margin: auto;
+}
+.brushColor {
+  margin-left: 15px;
+  align-self: center;
+  height: 60px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 35px 15px;
+  background: repeating-linear-gradient(
+  -45deg,
+  white,
+  white 10px,
+  lightGrey 10px,
+  lightGrey 20px
+);
+}
